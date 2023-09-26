@@ -38,8 +38,6 @@ class PINN_discovery(PINN):
     def forward(self, xy):
         layer = self.input_layer(xy)
         layer = self.block(layer) + layer
-        layer = self.block(layer) + layer
-        layer = self.block(layer) + layer
         phi = self.output_layer(layer)
         return phi
     
